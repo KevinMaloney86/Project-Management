@@ -29,7 +29,7 @@ struct monster monsters[] =
 {
   {"Bat", 4, 2, "A large, vicious bat."},
   {"Goblin", 8, 3, "A warty green creature."},
-  {"Skeleton", 12, 4, "A spooky skeleton"}
+  {"Skeleton", 12, 4, "A spooky scary skeleton"}
 };
 
 struct monster *
