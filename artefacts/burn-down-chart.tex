@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt,landscape]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+
+\pgfplotsset{width=\textwidth,height=\textheight}
+\title{Burn down chart}
+\author{Starship Troopers}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Preamble}
+The following burn down chart is a pre-sprint estimate for Starship
+Trooper's \texttt{oubliette} project. It documents the expected
+velocity for the team's first sprint and will provide an invaluable
+benchmark for use in planning the velocity of the subsequent sprint.
+
+The chart was produced using the \LaTeX\ typesetting language, and
+the corresponding source file can be found in the Starship Trooper's
+\texttt{git} repository.
+
+\section*{Team velocity}
+Due to our team's strong experience with the C programming language
+and the advanced status of the proof-of-concept that was implemented
+early in the planning process, we estimate our team velocity to be
+c. 25 points per sprint.
+
+While this may seem ambitious, we are confident that our team's ability
+and the aid of Jira\textregistered--\textit{``the \#1 software development
+tool used by agile teams''}--we can produce a shippible product by the
+end of the first sprint.
+
+\begin{tikzpicture}
+\begin{axis}[
+  title={\texttt{oubliette} release burn down chart},
+  xlabel={Sprint},
+  ylabel={Story points},
+  xmin=0,
+  xmax=14,
+  ymin=0,
+  ymax=60,
+  xtick={1,2,3,4},
+  ytick={52,44,36,28,20,12,4,0},
+  ymajorgrids=true,
+  legend pos=north west,
+  grid style=dashed,
+]
+\addplot[
+  color=blue,
+  mark=square,
+]
+coordinates {
+(1,52)(2,26)(3,0)(4,0)
+};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
